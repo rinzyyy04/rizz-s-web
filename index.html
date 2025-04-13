@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>rizz.art__</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="header">
+    <img src="profil.jpeg" alt="ProfilKu" class="profil-pic">
+    <h1>rizz.art__</h1>
+    <p class="slogan"><span id="typing-text"></span><span class="cursor">|</span></p>
+  </div>
+
+  <div>
+    <a href="gallery.html"><button class="myart">MyArt</button></a>
+    <a href="https://www.instagram.com/rizz.art___"><button class="instagram">Instagram</button></a>
+    <a href="https://www.tiktok.com/@imhirohito04"><button class="tiktok">TikTok</button></a>
+    <a href="alat.html"><button class="mytools">MyTools</button></a>
+  </div>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      document.body.classList.add('fade-in');
+    });
+
+    const links = document.querySelectorAll('a');
+
+    links.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const href = this.getAttribute('href');
+        document.body.classList.remove('fade-in');
+        document.body.style.opacity = 0;
+        document.body.style.transform = 'translateY(50px)';
+        setTimeout(() => {
+          window.location.href = href;
+        }, 300);
+      });
+    });
+  </script>
+  <script>
+    const text = "Sketching dreams, one line at a time...";
+    let index = 0;
+    const typingText = document.getElementById("typing-text");
+    const cursor = document.querySelector(".cursor");
+  
+    function type() {
+      if (index < text.length) {
+        typingText.innerHTML += text.charAt(index);
+        index++;
+        setTimeout(type, 100);
+      } else {
+        cursor.style.display = 'none';
+      }
+    }
+  
+    window.onload = type;
+  </script>
+</body>
+</html>

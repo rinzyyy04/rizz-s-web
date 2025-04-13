@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Tools</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="gallery-page">
+  <h1>My Tools Gallery</h1>
+
+  <div class="gallery">
+    <div class="art-container">
+      <p class="art-title">Tools by rizz.art</p>
+      <img src="t1.jpeg" alt="Art 1" class="art-img">
+    </div>
+    <div class="art-container">
+      <p class="art-title">Tools by rizz.art</p>
+      <img src="t2.jpeg" alt="Art 1" class="art-img">
+    </div>
+    <div class="art-container">
+      <p class="art-title">Tools by rizz.art</p>
+      <img src="t3.jpeg" alt="Art 1" class="art-img">
+    </div>
+    <div class="art-container">
+      <p class="art-title">Tools by rizz.art</p>
+      <img src="t4.jpeg" alt="Art 1" class="art-img">
+    </div>
+    <div class="art-container">
+      <p class="art-title">Tools by rizz.art</p>
+      <img src="t5.jpeg" alt="Art 1" class="art-img">
+    </div>
+    <div class="art-container">
+      <p class="art-title">Tools by rizz.art</p>
+      <img src="t6.jpeg" alt="Art 1" class="art-img">
+    </div>
+    <div class="art-container">
+      <p class="art-title">Tools by rizz.art</p>
+      <img src="t7.jpeg" alt="Art 1" class="art-img">
+    </div>
+    <div class="art-container">
+      <p class="art-title">Tools by rizz.art</p>
+      <img src="t8.jpeg" alt="Art 1" class="art-img">
+    </div>
+    <div class="art-container">
+      <p class="art-title">Tools by rizz.art</p>
+      <img src="t9.jpeg" alt="Art 1" class="art-img">
+    </div>
+  </div>
+  <script>
+    // Saat halaman selesai dimuat, aktifkan efek fade-in
+    window.addEventListener('DOMContentLoaded', () => {
+      document.body.classList.add('fade-in');
+    });
+  
+    // Efek keluar pas klik tombol/link
+    const links = document.querySelectorAll('a');
+  
+    links.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const href = this.getAttribute('href');
+        document.body.classList.remove('fade-in');
+        document.body.style.opacity = 0;
+        setTimeout(() => {
+          window.location.href = href;
+        }, 300); // 0.3 detik transisi
+      });
+    });
+  </script>
+</body>
+</html>

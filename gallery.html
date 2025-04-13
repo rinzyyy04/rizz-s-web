@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Art</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="gallery-page">
+  <h1>My Art Gallery</h1>
+
+  <div class="gallery">
+    <div class="art-container">
+      <p class="art-title">Sketch by rizz.art</p>
+      <img src="a1.jpeg" alt="Art 1" class="art-img">
+    </div>
+    <div class="art-container">
+      <p class="art-title">Sketch by rizz.art</p>
+      <img src="a2.jpeg" alt="Art 2" class="art-img">
+    </div>
+    <div class="art-container">
+      <p class="art-title">Sketch by rizz.art</p>
+      <img src="g3.jpeg" alt="Art 3" class="art-img">
+    </div>
+    <div class="art-container">
+      <p class="art-title">Sketch by rizz.art</p>
+      <img src="a4.jpeg" alt="Art 3" class="art-img">
+    </div>
+    <div class="art-container">
+      <p class="art-title">Sketch by rizz.art</p>
+      <img src="a5.jpeg" alt="Art 3" class="art-img">
+    </div>
+    <div class="art-container">
+      <p class="art-title">Sketch by rizz.art</p>
+      <img src="a6.jpeg" alt="Art 3" class="art-img">
+    </div>
+    <div class="art-container">
+      <p class="art-title">Sketch by rizz.art</p>
+      <img src="a7.jpeg" alt="Art 3" class="art-img">
+    </div>
+    <div class="art-container">
+      <p class="art-title">Sketch by rizz.art</p>
+      <img src="a8.jpeg" alt="Art 3" class="art-img">
+    </div>
+    <div class="art-container">
+      <p class="art-title">Sketch by rizz.art</p>
+      <img src="a9.jpeg" alt="Art 3" class="art-img">
+    </div>
+    <div class="art-container">
+      <p class="art-title">Sketch by rizz.art</p>
+      <img src="a10.jpeg" alt="Art 3" class="art-img">
+    </div>
+    <div class="art-container">
+      <p class="art-title">Sketch by rizz.art</p>
+      <img src="a11.jpeg" alt="Art 3" class="art-img">
+    </div>
+    <div class="art-container">
+      <p class="art-title">Sketch by rizz.art</p>
+      <img src="a12.jpeg" alt="Art 3" class="art-img">
+    </div>
+    <div class="art-container">
+      <p class="art-title">Sketch by rizz.art</p>
+      <img src="a13.jpeg" alt="Art 3" class="art-img">
+    </div>
+    <div class="art-container">
+      <p class="art-title">Sketch by rizz.art</p>
+      <img src="a14.jpeg" alt="Art 3" class="art-img">
+    </div>
+    <div class="art-container">
+      <p class="art-title">Sketch by rizz.art</p>
+      <img src="a15.jpeg" alt="Art 3" class="art-img">
+    </div>
+    <div class="art-container">
+      <p class="art-title">Sketch by rizz.art</p>
+      <img src="a16.jpeg" alt="Art 3" class="art-img">
+    </div>
+    <div class="art-container">
+      <p class="art-title">Sketch by rizz.art</p>
+      <img src="a17.jpeg" alt="Art 3" class="art-img">
+    </div>
+    <div class="art-container">
+      <p class="art-title">Sketch by rizz.art</p>
+      <img src="a18.jpeg" alt="Art 3" class="art-img">
+    </div>
+    <div class="art-container">
+      <p class="art-title">Sketch by rizz.art</p>
+      <img src="a19.jpeg" alt="Art 3" class="art-img">
+    </div>
+    <div class="art-container">
+      <p class="art-title">Sketch by rizz.art</p>
+      <img src="a20.jpeg" alt="Art 3" class="art-img">
+    </div>
+    <div class="art-container">
+      <p class="art-title">Sketch by rizz.art</p>
+      <img src="a21.jpeg" alt="Art 3" class="art-img">
+    </div>
+    <div class="art-container">
+      <p class="art-title">Sketch by rizz.art</p>
+      <img src="a22.jpeg" alt="Art 3" class="art-img">
+    </div>
+    <div class="art-container">
+      <p class="art-title">Sketch by rizz.art</p>
+      <img src="a23.jpeg" alt="Art 3" class="art-img">
+    </div>
+  </div>
+  <script>
+    // Saat halaman selesai dimuat, aktifkan efek fade-in
+    window.addEventListener('DOMContentLoaded', () => {
+      document.body.classList.add('fade-in');
+    });
+  
+    // Efek keluar pas klik tombol/link
+    const links = document.querySelectorAll('a');
+  
+    links.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const href = this.getAttribute('href');
+        document.body.classList.remove('fade-in');
+        document.body.style.opacity = 0;
+        setTimeout(() => {
+          window.location.href = href;
+        }, 300); // 0.3 detik transisi
+      });
+    });
+  </script>
+</body>
+</html>
