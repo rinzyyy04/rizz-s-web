@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,9 +8,10 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <audio id="clickSound" src="click.mp3" preload="auto"></audio>
   <div class="header">
     <img src="profil.jpeg" alt="ProfilKu" class="profil-pic">
-    <h1>rizz.art__</h1>
+    <h1>rizz.art</h1>
     <p class="slogan"><span id="typing-text"></span><span class="cursor">|</span></p>
   </div>
 
@@ -19,7 +21,26 @@
     <a href="https://www.tiktok.com/@imhirohito04"><button class="tiktok">TikTok</button></a>
     <a href="alat.html"><button class="mytools">MyTools</button></a>
   </div>
+  <div class="moon" id="moon"></div>
+  <!-- Dark Mode Toggle -->
+<button id="darkToggle" class="toggle-btn">Toggle Dark Mode</button>
+<!-- Footer -->
+<footer class="footer">
+  <p>© Rizky 2025 | All rights reserved</p>
+  <p>Contact: @rizzart.com</p>
+</footer>
 
+<script>
+  let keySeq = "";
+  document.addEventListener("keydown", (e) => {
+    keySeq += e.key.toLowerCase();
+    if (keySeq.includes("rizz")) {
+      document.body.classList.toggle("glitch-mode");
+      keySeq = "";
+    }
+    if (keySeq.length > 4) keySeq = keySeq.slice(-4);
+  });
+</script>
   <script>
     window.addEventListener('DOMContentLoaded', () => {
       document.body.classList.add('fade-in');
@@ -58,5 +79,20 @@
   
     window.onload = type;
   </script>
+  <script>
+    const toggleBtn = document.getElementById('darkToggle');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
+  <script>
+  const clickSound = document.getElementById("clickSound");
+  document.querySelectorAll("button, a").forEach(el => {
+    el.addEventListener("click", () => {
+      clickSound.currentTime = 0;
+      clickSound.play();
+    });
+  });
+</script>
 </body>
 </html>
